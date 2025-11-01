@@ -116,7 +116,7 @@ app.get("/groups", async (req, res) => {
             return res.status(400).json({ error: "Client not initialized" });
         }
 
-        console.log(📋 Fetching groups for session: ${sessionId});
+console.log(`📋 Fetching groups for session: ${sessionId}`);
         
         // Fetch groups from WhatsApp
         const groupData = await waClient.groupFetchAllParticipating();
@@ -1060,3 +1060,4 @@ app.listen(PORT, () => {
     console.log(📟 Device pairing feature activated);
     console.log(👥 Group listing and selection feature added);
 });
+
